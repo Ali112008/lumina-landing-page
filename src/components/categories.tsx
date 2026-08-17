@@ -26,8 +26,8 @@ const categories: Category[] = [
       "https://luminamajestic.com/wp-content/uploads/2025/10/تصميم-بدون-عنوان-1-1.png",
   },
   {
-    nameAr: "حيوانات",
-    nameEn: "ANIMALS",
+    nameAr: "طبيعة",
+    nameEn: "NATURE",
     image:
       "https://luminamajestic.com/wp-content/uploads/2025/10/تصميم-بدون-عنوان-3.png",
   },
