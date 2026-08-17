@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { MessageCircle } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface Product {
@@ -7,6 +7,7 @@ interface Product {
   image: string;
   price: string;
   originalPrice: string;
+  storeUrl: string;
 }
 
 const products: Product[] = [
@@ -16,12 +17,14 @@ const products: Product[] = [
       "https://luminamajestic.com/wp-content/uploads/2025/10/IMG_3899-600x800.png",
     price: "649",
     originalPrice: "849",
+    storeUrl: "https://luminamajestic.com/product/هيبةُ-الخريف/",
   },
   {
     name: "الصقرُ الثلجي",
     image: "/IMG_3902-scaled.webp",
     price: "649",
     originalPrice: "849",
+    storeUrl: "https://luminamajestic.com/product/الصقر-الثلجي/",
   },
   {
     name: "طيف النمر",
@@ -29,6 +32,7 @@ const products: Product[] = [
       "https://luminamajestic.com/wp-content/uploads/2025/10/IMG_3904-1-600x800.png",
     price: "649",
     originalPrice: "849",
+    storeUrl: "https://luminamajestic.com/product/صهيل-الأفق/",
   },
   {
     name: "دلالُ الغزال",
@@ -36,6 +40,7 @@ const products: Product[] = [
       "https://luminamajestic.com/wp-content/uploads/2026/01/IMG_3855-1067x800.png",
     price: "649",
     originalPrice: "849",
+    storeUrl: "https://luminamajestic.com/product/شموخُ-الغزال/",
   },
   {
     name: "سحرُ الطاوسُ",
@@ -43,12 +48,14 @@ const products: Product[] = [
       "https://luminamajestic.com/wp-content/uploads/2026/01/IMG_3865-1067x800.png",
     price: "649",
     originalPrice: "849",
+    storeUrl: "https://luminamajestic.com/product/رونقُ-الطاووس/",
   },
   {
     name: "بريقُ الأسد",
     image: "/IMG_3940-scaled.webp",
     price: "649",
     originalPrice: "849",
+    storeUrl: "https://luminamajestic.com/product/جلالةُ-الأسد/",
   },
 ];
 
@@ -155,19 +162,20 @@ export default function ProductShowcase() {
                   </span>
                 </div>
 
-                {/* WhatsApp inquiry — refined button */}
+                {/* View in store — refined button */}
                 <Button
                   asChild
                   size="sm"
-                  className="bg-[var(--color-whatsapp)] hover:bg-[#20BD5A] text-white rounded-lg gap-1.5 text-xs font-medium h-9 px-4 transition-all duration-300 hover:scale-105"
+                  className="rounded-lg gap-1.5 text-xs font-medium h-9 px-4 transition-all duration-300 hover:scale-105"
+                  style={{ background: "var(--accent-primary)", color: "#fff" }}
                 >
                   <a
-                    href={`https://wa.me/97471722484?text=${encodeURIComponent(`مرحباً، أرغب في الاستفسار عن لوحة "${product.name}"`)}`}
+                    href={product.storeUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <MessageCircle className="w-3.5 h-3.5" />
-                    استفسار
+                    <ExternalLink className="w-3.5 h-3.5" />
+                    مشاهدة في المتجر
                   </a>
                 </Button>
               </div>
@@ -178,7 +186,7 @@ export default function ProductShowcase() {
         {/* View all CTA — luxury style */}
         <div className="text-center mt-14">
           <a
-            href="https://luminamajestic.com"
+            href="https://luminamajestic.com/shop/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 text-sm font-medium transition-all duration-300 hover:gap-4"

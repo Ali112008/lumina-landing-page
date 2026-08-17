@@ -4,6 +4,7 @@ interface Category {
   nameAr: string;
   nameEn: string;
   image: string;
+  storeUrl: string;
 }
 
 const categories: Category[] = [
@@ -12,24 +13,28 @@ const categories: Category[] = [
     nameEn: "LUXURY VEHICLE",
     image:
       "https://luminamajestic.com/wp-content/uploads/2025/10/تصميم-بدون-عنوان-4.png",
+    storeUrl: "https://luminamajestic.com/product-category/⁠سيارات-فارهه-luxury-cars/",
   },
   {
     nameAr: "فن إسلامي",
     nameEn: "ISLAMIC ART",
     image:
       "https://luminamajestic.com/wp-content/uploads/2025/10/تصميم-بدون-عنوان-2-1.png",
+    storeUrl: "https://luminamajestic.com/product-category/⁠فن-إسلامي-islamic-art/",
   },
   {
     nameAr: "واجهة المدينة",
     nameEn: "SKYLINE",
     image:
       "https://luminamajestic.com/wp-content/uploads/2025/10/تصميم-بدون-عنوان-1-1.png",
+    storeUrl: "https://luminamajestic.com/product-category/واجهه-المدينه-skyline/",
   },
   {
     nameAr: "طبيعة",
     nameEn: "NATURE",
     image:
       "https://luminamajestic.com/wp-content/uploads/2025/10/تصميم-بدون-عنوان-3.png",
+    storeUrl: "https://luminamajestic.com/product-category/⁠الطبيعه-الفنيه-artistic-nature/",
   },
 ];
 
@@ -73,9 +78,12 @@ export default function Categories() {
         {/* Categories grid — gallery presentation */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
           {categories.map((cat, i) => (
-            <div
+            <a
               key={i}
-              className="group relative rounded-2xl overflow-hidden aspect-[3/4] cursor-pointer luxury-card"
+              href={cat.storeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative rounded-2xl overflow-hidden aspect-[3/4] cursor-pointer luxury-card block"
             >
               <Image
                 src={cat.image}
@@ -114,7 +122,7 @@ export default function Categories() {
               <div className="absolute inset-0 rounded-2xl pointer-events-none z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                 style={{ border: "1px solid rgba(212,175,55,0.2)" }}
               />
-            </div>
+            </a>
           ))}
         </div>
       </div>
