@@ -59,19 +59,7 @@ export default function Hero() {
               unoptimized
             />
           </div>
-          {/* Brand name beneath logo */}
-          <h2
-            className="mt-4 text-2xl sm:text-3xl md:text-4xl font-bold tracking-[0.3em] uppercase"
-            style={{ color: "var(--accent-primary)" }}
-          >
-            LUMINA
-          </h2>
-          <p
-            className="mt-1 text-xs sm:text-sm tracking-[0.25em] uppercase"
-            style={{ color: "var(--accent-champagne)" }}
-          >
-            Majestic
-          </p>
+          {/* Brand name beneath logo — hidden, logo already shows brand name */}
         </div>
 
         {/* Ornamental gold divider */}
