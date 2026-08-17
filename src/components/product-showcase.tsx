@@ -35,7 +35,7 @@ const products: Product[] = [
     storeUrl: "https://luminamajestic.com/product/iphone-dock-%d9%86%d8%b3%d8%ae%d8%a9/",
   },
   {
-    name: "دلالُ الغزال",
+    name: "شموخُ الغزال",
     image:
       "https://luminamajestic.com/wp-content/uploads/2026/01/IMG_3855-1067x800.png",
     price: "649",
@@ -43,7 +43,7 @@ const products: Product[] = [
     storeUrl: "https://luminamajestic.com/product/شموخُ-الغزال/",
   },
   {
-    name: "سحرُ الطاوسُ",
+    name: "رونقُ الطاووس",
     image:
       "https://luminamajestic.com/wp-content/uploads/2026/01/IMG_3865-1067x800.png",
     price: "649",
@@ -51,7 +51,7 @@ const products: Product[] = [
     storeUrl: "https://luminamajestic.com/product/رونقُ-الطاووس/",
   },
   {
-    name: "بريقُ الأسد",
+    name: "جلالةُ الأسد",
     image: "/IMG_3940-scaled.webp",
     price: "649",
     originalPrice: "849",
