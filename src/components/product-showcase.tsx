@@ -14,43 +14,43 @@ const products: Product[] = [
     name: "أجنحةٌ الفراشه الماسيّة",
     image:
       "https://luminamajestic.com/wp-content/uploads/2025/10/IMG_3899-600x800.png",
-    price: "٦٤٩",
-    originalPrice: "٨٤٩",
+    price: "649",
+    originalPrice: "849",
   },
   {
     name: "الصقرُ الثلجي",
     image:
       "https://luminamajestic.com/wp-content/uploads/2026/01/IMG_3905-600x800.png",
-    price: "٦٤٩",
-    originalPrice: "٨٤٩",
+    price: "649",
+    originalPrice: "849",
   },
   {
     name: "طيف النمر",
     image:
       "https://luminamajestic.com/wp-content/uploads/2025/10/IMG_3904-1-600x800.png",
-    price: "٦٤٩",
-    originalPrice: "٨٤٩",
+    price: "649",
+    originalPrice: "849",
   },
   {
     name: "دلالُ الغزال",
     image:
       "https://luminamajestic.com/wp-content/uploads/2026/01/IMG_3855-1067x800.png",
-    price: "٦٤٩",
-    originalPrice: "٨٤٩",
+    price: "649",
+    originalPrice: "849",
   },
   {
     name: "سحرُ الطاوسُ",
     image:
       "https://luminamajestic.com/wp-content/uploads/2026/01/IMG_3865-1067x800.png",
-    price: "٦٤٩",
-    originalPrice: "٨٤٩",
+    price: "649",
+    originalPrice: "849",
   },
   {
     name: "بريقُ الأسد",
     image:
       "https://luminamajestic.com/wp-content/uploads/2021/08/IMG_3848-1067x800.png",
-    price: "٦٤٩",
-    originalPrice: "٨٤٩",
+    price: "649",
+    originalPrice: "849",
   },
 ];
 

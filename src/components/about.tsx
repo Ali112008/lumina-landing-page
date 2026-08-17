@@ -68,9 +68,9 @@ export default function About() {
         {/* Stats — luxury presentation */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mt-18 max-w-4xl mx-auto">
           {[
-            { value: "١+", label: "سنة خبرة" },
-            { value: "٥٠+", label: "تصميم فريد" },
-            { value: "٩٧٤", label: "قطر" },
+            { value: "1+", label: "سنة خبرة" },
+            { value: "50+", label: "تصميم فريد" },
+            { value: "974", label: "قطر" },
             { value: "∞", label: "إصدارات محدودة" },
           ].map((stat, i) => (
             <div
