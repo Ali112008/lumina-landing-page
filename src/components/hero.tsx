@@ -51,7 +51,7 @@ export default function Hero() {
               style={{ background: "radial-gradient(circle, rgba(232,89,12,0.2) 0%, transparent 60%)" }}
             />
             <Image
-              src="https://luminamajestic.com/wp-content/uploads/2025/10/cropped-Logo-description_20250909_135324_0000_page-0001.png"
+              src="https://luminamajestic.com/wp-content/uploads/2025/10/cropped-Logo-description_20250909_135324_0000_page-0001.jpg"
               alt="LUMINA Majestic"
               width={180}
               height={180}
