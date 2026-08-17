@@ -19,8 +19,7 @@ const products: Product[] = [
   },
   {
     name: "الصقرُ الثلجي",
-    image:
-      "https://luminamajestic.com/wp-content/uploads/2026/01/IMG_3905-600x800.png",
+    image: "/IMG_3902-scaled.webp",
     price: "649",
     originalPrice: "849",
   },
@@ -47,8 +46,7 @@ const products: Product[] = [
   },
   {
     name: "بريقُ الأسد",
-    image:
-      "https://luminamajestic.com/wp-content/uploads/2021/08/IMG_3848-1067x800.png",
+    image: "/IMG_3940-scaled.webp",
     price: "649",
     originalPrice: "849",
   },
