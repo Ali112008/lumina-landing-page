@@ -1,9 +1,14 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { MessageCircle } from "lucide-react";
+import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 export default function FinalCTA() {
+  const { ref: contentRef, revealed: contentRevealed } = useScrollReveal<HTMLDivElement>();
+
   return (
-    <section id="contact" className="py-20 md:py-28 bg-lumina-cta relative overflow-hidden texture-noise">
+    <section id="contact" className="py-20 md:py-28 bg-lumina-cta relative overflow-hidden texture-noise section-fade">
       {/* Cinematic ambient light */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div
@@ -20,7 +25,10 @@ export default function FinalCTA() {
         />
       </div>
 
-      <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 text-center">
+      <div
+        ref={contentRef}
+        className={`relative z-10 max-w-3xl mx-auto px-4 sm:px-6 text-center scroll-reveal ${contentRevealed ? "revealed" : ""}`}
+      >
         <span
           className="inline-block text-xs font-medium tracking-[0.25em] uppercase mb-5"
           style={{ color: "var(--accent-champagne)" }}

@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useScrollReveal, useScrollRevealGroup } from "@/hooks/use-scroll-reveal";
 
 interface Category {
   nameAr: string;
@@ -39,8 +42,11 @@ const categories: Category[] = [
 ];
 
 export default function Categories() {
+  const { ref: headerRef, revealed: headerRevealed } = useScrollReveal<HTMLDivElement>();
+  const { ref: gridRef, revealed: gridRevealed } = useScrollRevealGroup<HTMLDivElement>({ staggerMs: 100 });
+
   return (
-    <section className="py-20 md:py-28 bg-lumina-categories relative overflow-hidden texture-noise">
+    <section className="py-20 md:py-28 bg-lumina-categories relative overflow-hidden texture-noise section-fade">
       {/* Ambient lighting */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div
@@ -55,7 +61,10 @@ export default function Categories() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
-        <div className="text-center mb-16">
+        <div
+          ref={headerRef}
+          className={`text-center mb-16 scroll-reveal ${headerRevealed ? "revealed" : ""}`}
+        >
           <span
             className="inline-block text-xs font-medium tracking-[0.25em] uppercase mb-4"
             style={{ color: "var(--accent-champagne)" }}
@@ -75,24 +84,26 @@ export default function Categories() {
           </div>
         </div>
 
-        {/* Categories grid — gallery presentation */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
+        {/* Categories grid — staggered reveal */}
+        <div ref={gridRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
           {categories.map((cat, i) => (
             <a
               key={i}
               href={cat.storeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative rounded-2xl overflow-hidden aspect-[3/4] cursor-pointer luxury-card block"
+              className="group relative rounded-2xl overflow-hidden aspect-[3/4] cursor-pointer luxury-card block scroll-reveal-scale hover-lift"
             >
-              <Image
-                src={cat.image}
-                alt={cat.nameAr}
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-110"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                unoptimized
-              />
+              <div className="absolute inset-0 image-reveal">
+                <Image
+                  src={cat.image}
+                  alt={cat.nameAr}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  unoptimized
+                />
+              </div>
 
               {/* Dramatic overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-[#0A0604]/95 via-[#0A0604]/30 to-transparent" />

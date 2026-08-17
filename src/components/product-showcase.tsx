@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useScrollReveal, useScrollRevealGroup } from "@/hooks/use-scroll-reveal";
 
 interface Product {
   name: string;
@@ -60,8 +61,12 @@ const products: Product[] = [
 ];
 
 export default function ProductShowcase() {
+  const { ref: headerRef, revealed: headerRevealed } = useScrollReveal<HTMLDivElement>();
+  const { ref: gridRef, revealed: gridRevealed } = useScrollRevealGroup<HTMLDivElement>({ staggerMs: 120 });
+  const { ref: ctaRef, revealed: ctaRevealed } = useScrollReveal<HTMLDivElement>();
+
   return (
-    <section id="products" className="py-20 md:py-28 bg-lumina-products relative overflow-hidden texture-noise">
+    <section id="products" className="py-20 md:py-28 bg-lumina-products relative overflow-hidden texture-noise section-fade">
       {/* Ambient lighting */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div
@@ -76,7 +81,10 @@ export default function ProductShowcase() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header — luxury gallery feel */}
-        <div className="text-center mb-16">
+        <div
+          ref={headerRef}
+          className={`text-center mb-16 scroll-reveal ${headerRevealed ? "revealed" : ""}`}
+        >
           <span
             className="inline-block text-xs font-medium tracking-[0.25em] uppercase mb-4"
             style={{ color: "var(--accent-champagne)" }}
@@ -97,11 +105,11 @@ export default function ProductShowcase() {
         </div>
 
         {/* Product grid — luxury art pieces */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div ref={gridRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {products.map((product, i) => (
             <div
               key={i}
-              className="group luxury-card relative rounded-2xl overflow-hidden transition-all duration-700"
+              className="group luxury-card relative rounded-2xl overflow-hidden transition-all duration-700 hover-lift scroll-reveal-scale"
               style={{
                 border: "1px solid rgba(212,175,55,0.08)",
                 background: "linear-gradient(180deg, rgba(14,9,7,0.7) 0%, rgba(10,6,4,0.9) 100%)",
@@ -116,7 +124,7 @@ export default function ProductShowcase() {
               />
 
               {/* Image — art piece presentation */}
-              <div className="relative aspect-[3/4] overflow-hidden">
+              <div className="relative aspect-[3/4] overflow-hidden image-reveal">
                 <Image
                   src={product.image}
                   alt={product.name}
@@ -184,7 +192,10 @@ export default function ProductShowcase() {
         </div>
 
         {/* View all CTA — luxury style */}
-        <div className="text-center mt-14">
+        <div
+          ref={ctaRef}
+          className={`text-center mt-14 scroll-reveal ${ctaRevealed ? "revealed" : ""}`}
+        >
           <a
             href="https://luminamajestic.com/shop/"
             target="_blank"

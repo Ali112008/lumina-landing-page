@@ -1,5 +1,8 @@
+"use client";
+
 import { Gem, Lightbulb, Diamond, Award } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import { useScrollReveal, useScrollRevealGroup } from "@/hooks/use-scroll-reveal";
 
 interface Feature {
   icon: LucideIcon;
@@ -35,8 +38,11 @@ const features: Feature[] = [
 ];
 
 export default function Features() {
+  const { ref: headerRef, revealed: headerRevealed } = useScrollReveal<HTMLDivElement>();
+  const { ref: gridRef, revealed: gridRevealed } = useScrollRevealGroup<HTMLDivElement>({ staggerMs: 100 });
+
   return (
-    <section className="py-20 md:py-28 bg-lumina-features relative overflow-hidden texture-noise">
+    <section className="py-20 md:py-28 bg-lumina-features relative overflow-hidden texture-noise section-fade">
       {/* Ambient lighting */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div
@@ -51,7 +57,10 @@ export default function Features() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
-        <div className="text-center mb-16">
+        <div
+          ref={headerRef}
+          className={`text-center mb-16 scroll-reveal ${headerRevealed ? "revealed" : ""}`}
+        >
           <span
             className="inline-block text-xs font-medium tracking-[0.25em] uppercase mb-4"
             style={{ color: "var(--accent-champagne)" }}
@@ -71,14 +80,14 @@ export default function Features() {
           </div>
         </div>
 
-        {/* Features grid — luxury cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Features grid — staggered reveal */}
+        <div ref={gridRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, i) => {
             const Icon = feature.icon;
             return (
               <div
                 key={i}
-                className="group p-7 md:p-8 rounded-2xl text-center transition-all duration-500 hover:shadow-gold luxury-card"
+                className="group p-7 md:p-8 rounded-2xl text-center transition-all duration-500 hover:shadow-gold luxury-card hover-lift scroll-reveal-scale"
                 style={{
                   border: "1px solid rgba(212,175,55,0.08)",
                   background: "linear-gradient(180deg, rgba(14,9,7,0.7) 0%, rgba(10,6,4,0.9) 100%)",
