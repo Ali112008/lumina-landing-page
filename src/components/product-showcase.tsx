@@ -60,7 +60,7 @@ export default function ProductShowcase() {
       {/* Decorative orb */}
       <div
         className="absolute top-[10%] right-[15%] w-[300px] h-[300px] rounded-full animate-orb-3 pointer-events-none"
-        style={{ background: "radial-gradient(circle, rgba(201,169,110,0.06) 0%, transparent 70%)" }}
+        style={{ background: "radial-gradient(circle, rgba(232,89,12,0.06) 0%, transparent 70%)" }}
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -85,7 +85,7 @@ export default function ProductShowcase() {
           {products.map((product, i) => (
             <div
               key={i}
-              className="group rounded-xl border border-[var(--border-default)] bg-[rgba(12,12,16,0.5)] backdrop-blur-sm overflow-hidden hover:border-[rgba(201,169,110,0.4)] transition-all duration-500 hover:shadow-glow"
+              className="group rounded-xl border border-[var(--border-default)] bg-[rgba(14,9,7,0.5)] backdrop-blur-sm overflow-hidden hover:border-[rgba(232,89,12,0.4)] transition-all duration-500 hover:shadow-glow"
             >
               {/* Image with label overlay */}
               <div className="relative aspect-[3/4] overflow-hidden">
@@ -98,7 +98,7 @@ export default function ProductShowcase() {
                   unoptimized
                 />
                 {/* Gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#060608] via-[rgba(6,6,8,0.3)] to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0A0604] via-[rgba(10,6,4,0.3)] to-transparent" />
 
                 {/* Product name label on image */}
                 <div className="absolute bottom-0 right-0 left-0 p-4">

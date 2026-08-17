@@ -3,7 +3,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* ========== LUMINA DARK LUXURY THEME ========== */
+/* ========== LUMINA DARK LUXURY THEME — LV ORANGE ========== */
 
 @theme inline {
   --color-background: var(--background);
@@ -53,53 +53,53 @@
 :root {
   --radius: 0.625rem;
 
-  /* === LUMINA BRAND COLORS === */
-  --bg-base: #060608;
-  --bg-surface: #0C0C10;
-  --bg-surface-alt: #141418;
+  /* === LUMINA BRAND COLORS — LOUIS VUITTON ORANGE === */
+  --bg-base: #0A0604;
+  --bg-surface: #0E0907;
+  --bg-surface-alt: #16100D;
   --text-primary: #F5F5F7;
   --text-muted: #9A9AA0;
-  --accent-primary: #C9A96E;
-  --accent-hover: #D9BC84;
-  --accent-glow: rgba(201, 169, 110, 0.25);
-  --border-default: #1C1C22;
+  --accent-primary: #E8590C;
+  --accent-hover: #F06E1F;
+  --accent-glow: rgba(232, 89, 12, 0.25);
+  --border-default: #201410;
   --color-whatsapp: #25D366;
   --color-instagram: #E4405F;
-  --color-deep-blue: #0A1628;
+  --color-deep-warm: #0D0604;
   --color-warm-brown: #1A0E05;
 
-  /* === shadcn/ui mapping to dark luxury === */
-  --background: #060608;
+  /* === shadcn/ui mapping to warm luxury === */
+  --background: #0A0604;
   --foreground: #F5F5F7;
-  --card: #0C0C10;
+  --card: #0E0907;
   --card-foreground: #F5F5F7;
-  --popover: #0C0C10;
+  --popover: #0E0907;
   --popover-foreground: #F5F5F7;
-  --primary: #C9A96E;
-  --primary-foreground: #060608;
-  --secondary: #141418;
+  --primary: #E8590C;
+  --primary-foreground: #0A0604;
+  --secondary: #16100D;
   --secondary-foreground: #F5F5F7;
-  --muted: #141418;
+  --muted: #16100D;
   --muted-foreground: #9A9AA0;
-  --accent: #C9A96E;
-  --accent-foreground: #060608;
+  --accent: #E8590C;
+  --accent-foreground: #0A0604;
   --destructive: #cf2e2e;
-  --border: #1C1C22;
-  --input: #1C1C22;
-  --ring: #C9A96E;
-  --chart-1: #C9A96E;
-  --chart-2: #D9BC84;
+  --border: #201410;
+  --input: #201410;
+  --ring: #E8590C;
+  --chart-1: #E8590C;
+  --chart-2: #F06E1F;
   --chart-3: #9A9AA0;
   --chart-4: #25D366;
   --chart-5: #E4405F;
-  --sidebar: #0C0C10;
+  --sidebar: #0E0907;
   --sidebar-foreground: #F5F5F7;
-  --sidebar-primary: #C9A96E;
-  --sidebar-primary-foreground: #060608;
-  --sidebar-accent: #141418;
+  --sidebar-primary: #E8590C;
+  --sidebar-primary-foreground: #0A0604;
+  --sidebar-accent: #16100D;
   --sidebar-accent-foreground: #F5F5F7;
-  --sidebar-border: #1C1C22;
-  --sidebar-ring: #C9A96E;
+  --sidebar-border: #201410;
+  --sidebar-ring: #E8590C;
 }
 
 @layer base {
@@ -114,45 +114,45 @@
   }
 }
 
-/* ========== RICH BACKGROUND GRADIENTS ========== */
+/* ========== RICH BACKGROUND GRADIENTS — WARM LV ORANGE ========== */
 
 .bg-lumina-hero {
   background:
-    radial-gradient(ellipse 80% 60% at 50% 40%, rgba(201,169,110,0.08) 0%, transparent 60%),
-    radial-gradient(ellipse 50% 80% at 20% 80%, rgba(10,22,40,0.5) 0%, transparent 50%),
-    radial-gradient(ellipse 50% 80% at 80% 20%, rgba(26,14,5,0.4) 0%, transparent 50%),
-    linear-gradient(180deg, #060608 0%, #0A0D14 30%, #0D0A0F 60%, #060608 100%);
+    radial-gradient(ellipse 80% 60% at 50% 40%, rgba(232,89,12,0.10) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 80% at 20% 80%, rgba(232,89,12,0.04) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 80% at 80% 20%, rgba(26,14,5,0.6) 0%, transparent 50%),
+    linear-gradient(180deg, #0A0604 0%, #100A06 30%, #0E0705 60%, #0A0604 100%);
 }
 
 .bg-lumina-about {
   background:
-    radial-gradient(ellipse 60% 50% at 70% 50%, rgba(201,169,110,0.04) 0%, transparent 50%),
-    linear-gradient(180deg, #060608 0%, #080A12 50%, #060608 100%);
+    radial-gradient(ellipse 60% 50% at 70% 50%, rgba(232,89,12,0.05) 0%, transparent 50%),
+    linear-gradient(180deg, #0A0604 0%, #0C0806 50%, #0A0604 100%);
 }
 
 .bg-lumina-features {
   background:
-    radial-gradient(ellipse 70% 60% at 30% 30%, rgba(201,169,110,0.05) 0%, transparent 50%),
-    linear-gradient(180deg, #0C0C10 0%, #0A0E18 50%, #0C0C10 100%);
+    radial-gradient(ellipse 70% 60% at 30% 30%, rgba(232,89,12,0.06) 0%, transparent 50%),
+    linear-gradient(180deg, #0E0907 0%, #100B08 50%, #0E0907 100%);
 }
 
 .bg-lumina-products {
   background:
-    radial-gradient(ellipse 60% 40% at 50% 20%, rgba(201,169,110,0.06) 0%, transparent 40%),
-    linear-gradient(180deg, #060608 0%, #0B0A0E 50%, #060608 100%);
+    radial-gradient(ellipse 60% 40% at 50% 20%, rgba(232,89,12,0.07) 0%, transparent 40%),
+    linear-gradient(180deg, #0A0604 0%, #0D0907 50%, #0A0604 100%);
 }
 
 .bg-lumina-categories {
   background:
-    radial-gradient(ellipse 50% 50% at 60% 60%, rgba(201,169,110,0.04) 0%, transparent 50%),
-    linear-gradient(180deg, #0C0C10 0%, #0A0C16 50%, #0C0C10 100%);
+    radial-gradient(ellipse 50% 50% at 60% 60%, rgba(232,89,12,0.05) 0%, transparent 50%),
+    linear-gradient(180deg, #0E0907 0%, #100A07 50%, #0E0907 100%);
 }
 
 .bg-lumina-cta {
   background:
-    radial-gradient(ellipse 80% 60% at 50% 50%, rgba(201,169,110,0.08) 0%, transparent 50%),
+    radial-gradient(ellipse 80% 60% at 50% 50%, rgba(232,89,12,0.10) 0%, transparent 50%),
     radial-gradient(ellipse 40% 60% at 80% 80%, rgba(37,211,102,0.04) 0%, transparent 40%),
-    linear-gradient(180deg, #060608 0%, #080D14 40%, #0A080C 70%, #060608 100%);
+    linear-gradient(180deg, #0A0604 0%, #0E0907 40%, #0C0705 70%, #0A0604 100%);
 }
 
 /* ========== ANIMATED PARTICLES / ORBS ========== */
@@ -207,8 +207,8 @@
 }
 
 @keyframes border-glow {
-  0%, 100% { border-color: rgba(201,169,110,0.15); }
-  50% { border-color: rgba(201,169,110,0.4); }
+  0%, 100% { border-color: rgba(232,89,12,0.15); }
+  50% { border-color: rgba(232,89,12,0.4); }
 }
 
 .animate-glow-pulse { animation: glow-pulse 3s ease-in-out infinite; }
@@ -217,7 +217,7 @@
 .animate-border-glow { animation: border-glow 3s ease-in-out infinite; }
 
 .animate-shimmer {
-  background: linear-gradient(90deg, transparent 0%, rgba(201, 169, 110, 0.08) 50%, transparent 100%);
+  background: linear-gradient(90deg, transparent 0%, rgba(232, 89, 12, 0.08) 50%, transparent 100%);
   background-size: 200% 100%;
   animation: shimmer 4s infinite;
 }
@@ -227,13 +227,13 @@
   animation: gradient-shift 6s ease infinite;
 }
 
-/* Gold glow shadow utility */
+/* Orange glow shadow utility */
 .shadow-glow {
-  box-shadow: 0 0 20px rgba(201, 169, 110, 0.12), 0 0 60px rgba(201, 169, 110, 0.04);
+  box-shadow: 0 0 20px rgba(232, 89, 12, 0.12), 0 0 60px rgba(232, 89, 12, 0.04);
 }
 
 .shadow-glow-lg {
-  box-shadow: 0 0 30px rgba(201, 169, 110, 0.18), 0 0 80px rgba(201, 169, 110, 0.06);
+  box-shadow: 0 0 30px rgba(232, 89, 12, 0.18), 0 0 80px rgba(232, 89, 12, 0.06);
 }
 
 /* WhatsApp pulse */
@@ -248,6 +248,6 @@
 /* ========== CUSTOM SCROLLBAR ========== */
 
 ::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: #0C0C10; }
-::-webkit-scrollbar-thumb { background: #1C1C22; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: #C9A96E; }
+::-webkit-scrollbar-track { background: #0E0907; }
+::-webkit-scrollbar-thumb { background: #201410; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #E8590C; }

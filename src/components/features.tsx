@@ -40,7 +40,7 @@ export default function Features() {
       {/* Animated orb */}
       <div
         className="absolute bottom-[20%] right-[5%] w-[350px] h-[350px] rounded-full animate-orb-1 pointer-events-none"
-        style={{ background: "radial-gradient(circle, rgba(201,169,110,0.05) 0%, transparent 70%)" }}
+        style={{ background: "radial-gradient(circle, rgba(232,89,12,0.05) 0%, transparent 70%)" }}
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -67,13 +67,13 @@ export default function Features() {
             return (
               <div
                 key={i}
-                className="group p-6 md:p-7 rounded-xl border border-[var(--border-default)] bg-[rgba(12,12,16,0.5)] backdrop-blur-sm hover:border-[rgba(201,169,110,0.4)] transition-all duration-500 hover:shadow-glow text-center"
+                className="group p-6 md:p-7 rounded-xl border border-[var(--border-default)] bg-[rgba(14,9,7,0.5)] backdrop-blur-sm hover:border-[rgba(232,89,12,0.4)] transition-all duration-500 hover:shadow-glow text-center"
               >
                 {/* Icon */}
                 <div
                   className="w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-5 transition-all duration-300 group-hover:scale-110 group-hover:shadow-glow"
                   style={{
-                    background: "linear-gradient(135deg, rgba(201,169,110,0.1), rgba(201,169,110,0.05))",
+                    background: "linear-gradient(135deg, rgba(232,89,12,0.1), rgba(232,89,12,0.05))",
                   }}
                 >
                   <Icon

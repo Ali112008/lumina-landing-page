@@ -4,7 +4,7 @@ export default function About() {
       {/* Decorative orb */}
       <div
         className="absolute top-[30%] left-[10%] w-[200px] h-[200px] rounded-full animate-orb-2 pointer-events-none"
-        style={{ background: "radial-gradient(circle, rgba(201,169,110,0.05) 0%, transparent 70%)" }}
+        style={{ background: "radial-gradient(circle, rgba(232,89,12,0.05) 0%, transparent 70%)" }}
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -21,7 +21,7 @@ export default function About() {
               في عالم تُعامل فيه اللوحات كعنصر ديكور عابر
             </span>
             <br />
-            <span className="bg-gradient-to-l from-[#C9A96E] via-[#D9BC84] to-[#C9A96E] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-l from-[#E8590C] via-[#F06E1F] to-[#E8590C] bg-clip-text text-transparent">
               وُلدت LUMINA لإعادة تعريف معنى اللوحة الفنية
             </span>
           </h2>
@@ -69,7 +69,7 @@ export default function About() {
           ].map((stat, i) => (
             <div
               key={i}
-              className="group text-center p-6 rounded-xl border border-[var(--border-default)] bg-[rgba(12,12,16,0.6)] backdrop-blur-sm hover:border-[rgba(201,169,110,0.3)] transition-all duration-300"
+              className="group text-center p-6 rounded-xl border border-[var(--border-default)] bg-[rgba(14,9,7,0.6)] backdrop-blur-sm hover:border-[rgba(232,89,12,0.3)] transition-all duration-300"
             >
               <div
                 className="text-3xl md:text-4xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300"

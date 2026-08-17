@@ -38,7 +38,7 @@ export default function Categories() {
     <section className="py-16 md:py-24 bg-lumina-categories relative overflow-hidden">
       <div
         className="absolute top-[50%] left-[5%] w-[250px] h-[250px] rounded-full animate-orb-1 pointer-events-none"
-        style={{ background: "radial-gradient(circle, rgba(201,169,110,0.04) 0%, transparent 70%)" }}
+        style={{ background: "radial-gradient(circle, rgba(232,89,12,0.04) 0%, transparent 70%)" }}
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -75,7 +75,7 @@ export default function Categories() {
               />
 
               {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#060608]/90 via-[#060608]/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0A0604]/90 via-[#0A0604]/20 to-transparent" />
 
               {/* Text */}
               <div className="absolute bottom-0 right-0 left-0 p-5">
@@ -94,7 +94,7 @@ export default function Categories() {
               </div>
 
               {/* Hover border glow */}
-              <div className="absolute inset-0 rounded-xl border border-transparent group-hover:border-[rgba(201,169,110,0.4)] group-hover:shadow-glow transition-all duration-500" />
+              <div className="absolute inset-0 rounded-xl border border-transparent group-hover:border-[rgba(232,89,12,0.4)] group-hover:shadow-glow transition-all duration-500" />
             </div>
           ))}
         </div>

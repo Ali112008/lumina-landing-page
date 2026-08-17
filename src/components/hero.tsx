@@ -13,21 +13,21 @@ export default function Hero() {
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div
           className="absolute top-[20%] left-[15%] w-[300px] h-[300px] rounded-full animate-orb-1"
-          style={{ background: "radial-gradient(circle, rgba(201,169,110,0.08) 0%, transparent 70%)" }}
+          style={{ background: "radial-gradient(circle, rgba(232,89,12,0.08) 0%, transparent 70%)" }}
         />
         <div
           className="absolute top-[60%] right-[10%] w-[400px] h-[400px] rounded-full animate-orb-2"
-          style={{ background: "radial-gradient(circle, rgba(10,22,40,0.3) 0%, transparent 70%)" }}
+          style={{ background: "radial-gradient(circle, rgba(232,89,12,0.04) 0%, transparent 70%)" }}
         />
         <div
           className="absolute bottom-[10%] left-[40%] w-[250px] h-[250px] rounded-full animate-orb-3"
-          style={{ background: "radial-gradient(circle, rgba(201,169,110,0.06) 0%, transparent 70%)" }}
+          style={{ background: "radial-gradient(circle, rgba(232,89,12,0.06) 0%, transparent 70%)" }}
         />
         {/* Subtle grid */}
         <div
           className="absolute inset-0 opacity-[0.02]"
           style={{
-            backgroundImage: `linear-gradient(rgba(201,169,110,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(201,169,110,0.4) 1px, transparent 1px)`,
+            backgroundImage: `linear-gradient(rgba(232,89,12,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(232,89,12,0.4) 1px, transparent 1px)`,
             backgroundSize: "80px 80px",
           }}
         />
@@ -36,7 +36,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center pt-20">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[var(--border-default)] bg-[rgba(201,169,110,0.06)] mb-8 backdrop-blur-sm">
+        <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[var(--border-default)] bg-[rgba(232,89,12,0.06)] mb-8 backdrop-blur-sm">
           <Sparkles className="w-4 h-4" style={{ color: "var(--accent-primary)" }} />
           <span className="text-sm font-medium" style={{ color: "var(--accent-primary)" }}>
             أول علامة متخصصة في قطر
@@ -47,7 +47,7 @@ export default function Hero() {
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
           <span style={{ color: "var(--text-primary)" }}>فن مُضاء…</span>
           <br />
-          <span className="inline-block bg-gradient-to-l from-[#C9A96E] via-[#D9BC84] to-[#C9A96E] bg-clip-text text-transparent animate-gradient-shift"
+          <span className="inline-block bg-gradient-to-l from-[#E8590C] via-[#F06E1F] to-[#E8590C] bg-clip-text text-transparent animate-gradient-shift"
             style={{ backgroundSize: "200% 200%" }}
           >
             يُحوّل جدرانك
@@ -84,7 +84,7 @@ export default function Hero() {
           <Button
             asChild
             variant="outline"
-            className="border-[var(--accent-primary)] text-[var(--accent-primary)] hover:bg-[var(--accent-primary)] hover:text-[#060608] rounded-xl gap-2 text-base font-medium h-13 px-8 transition-all duration-300 hover:scale-105"
+            className="border-[var(--accent-primary)] text-[var(--accent-primary)] hover:bg-[var(--accent-primary)] hover:text-[#0A0604] rounded-xl gap-2 text-base font-medium h-13 px-8 transition-all duration-300 hover:scale-105"
           >
             <a href="#products">اكتشف تصاميمنا</a>
           </Button>
@@ -100,7 +100,7 @@ export default function Hero() {
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float">
-        <div className="w-6 h-10 rounded-full border-2 flex items-start justify-center pt-2" style={{ borderColor: "rgba(201,169,110,0.3)" }}>
+        <div className="w-6 h-10 rounded-full border-2 flex items-start justify-center pt-2" style={{ borderColor: "rgba(232,89,12,0.3)" }}>
           <div className="w-1 h-2 rounded-full animate-pulse" style={{ background: "var(--accent-primary)" }} />
         </div>
       </div>

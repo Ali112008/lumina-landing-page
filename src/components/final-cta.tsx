@@ -8,7 +8,7 @@ export default function FinalCTA() {
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div
           className="absolute top-[40%] left-[30%] w-[400px] h-[400px] rounded-full animate-orb-1"
-          style={{ background: "radial-gradient(circle, rgba(201,169,110,0.06) 0%, transparent 70%)" }}
+          style={{ background: "radial-gradient(circle, rgba(232,89,12,0.06) 0%, transparent 70%)" }}
         />
         <div
           className="absolute bottom-[20%] right-[20%] w-[300px] h-[300px] rounded-full animate-orb-2"
