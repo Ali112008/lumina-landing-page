@@ -1,18 +1,24 @@
 export default function About() {
   return (
-    <section id="about" className="py-16 md:py-24 bg-lumina-about relative overflow-hidden">
-      {/* Decorative orb */}
-      <div
-        className="absolute top-[30%] left-[10%] w-[200px] h-[200px] rounded-full animate-orb-2 pointer-events-none"
-        style={{ background: "radial-gradient(circle, rgba(232,89,12,0.05) 0%, transparent 70%)" }}
-      />
+    <section id="about" className="py-20 md:py-28 bg-lumina-about relative overflow-hidden texture-noise">
+      {/* Ambient lighting */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div
+          className="absolute top-[20%] left-[5%] w-[300px] h-[300px] rounded-full animate-orb-2"
+          style={{ background: "radial-gradient(circle, rgba(232,89,12,0.06) 0%, transparent 60%)" }}
+        />
+        <div
+          className="absolute bottom-[30%] right-[10%] w-[250px] h-[250px] rounded-full animate-orb-1"
+          style={{ background: "radial-gradient(circle, rgba(212,175,55,0.04) 0%, transparent 60%)" }}
+        />
+      </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section label */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-14">
           <span
-            className="inline-block text-sm font-medium tracking-widest uppercase mb-3"
-            style={{ color: "var(--accent-primary)" }}
+            className="inline-block text-xs font-medium tracking-[0.25em] uppercase mb-4"
+            style={{ color: "var(--accent-champagne)" }}
           >
             من نحن
           </span>
@@ -36,10 +42,10 @@ export default function About() {
             هي بيان ذوق، وانعكاس لشخصية المكان، وخيار لمن يبحث عن التميز دون تنازل.
           </p>
 
-          <div
-            className="w-20 h-px mx-auto"
-            style={{ background: "linear-gradient(90deg, transparent, var(--accent-primary), transparent)" }}
-          />
+          {/* Gold ornamental divider */}
+          <div className="ornament-divider">
+            <div className="w-1.5 h-1.5 rotate-45" style={{ background: "var(--accent-gold)" }} />
+          </div>
 
           <p
             className="text-base md:text-lg leading-loose"
@@ -59,30 +65,36 @@ export default function About() {
           </p>
         </div>
 
-        {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mt-16 max-w-4xl mx-auto">
+        {/* Stats — luxury presentation */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mt-18 max-w-4xl mx-auto">
           {[
             { value: "١+", label: "سنة خبرة" },
             { value: "٥٠+", label: "تصميم فريد" },
-            { value: "٩٧٤", label: "قطر 🇶🇦" },
+            { value: "٩٧٤", label: "قطر" },
             { value: "∞", label: "إصدارات محدودة" },
           ].map((stat, i) => (
             <div
               key={i}
-              className="group text-center p-6 rounded-xl border border-[var(--border-default)] bg-[rgba(14,9,7,0.6)] backdrop-blur-sm hover:border-[rgba(232,89,12,0.3)] transition-all duration-300"
+              className="group text-center p-6 md:p-8 rounded-xl transition-all duration-500 hover:shadow-gold"
+              style={{
+                border: "1px solid rgba(212,175,55,0.08)",
+                background: "linear-gradient(180deg, rgba(14,9,7,0.7) 0%, rgba(10,6,4,0.9) 100%)",
+              }}
             >
               <div
-                className="text-3xl md:text-4xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300"
+                className="text-3xl md:text-5xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300"
                 style={{ color: "var(--accent-primary)" }}
               >
                 {stat.value}
               </div>
               <div
-                className="text-sm"
-                style={{ color: "var(--text-muted)" }}
+                className="text-xs md:text-sm tracking-wide"
+                style={{ color: "var(--accent-champagne)" }}
               >
                 {stat.label}
               </div>
+              {/* Subtle gold underline */}
+              <div className="w-8 h-px mx-auto mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ background: "var(--accent-gold)" }} />
             </div>
           ))}
         </div>
