@@ -1,17 +1,20 @@
 import { Button } from "@/components/ui/button";
-import { MessageCircle, Phone } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 
 export default function FinalCTA() {
   return (
-    <section id="contact" className="py-16 md:py-24 bg-[var(--bg-base)] relative overflow-hidden">
-      {/* Background glow */}
-      <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full"
-        style={{
-          background:
-            "radial-gradient(circle, rgba(201,169,110,0.06) 0%, transparent 70%)",
-        }}
-      />
+    <section id="contact" className="py-16 md:py-24 bg-lumina-cta relative overflow-hidden">
+      {/* Animated orbs */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div
+          className="absolute top-[40%] left-[30%] w-[400px] h-[400px] rounded-full animate-orb-1"
+          style={{ background: "radial-gradient(circle, rgba(201,169,110,0.06) 0%, transparent 70%)" }}
+        />
+        <div
+          className="absolute bottom-[20%] right-[20%] w-[300px] h-[300px] rounded-full animate-orb-2"
+          style={{ background: "radial-gradient(circle, rgba(37,211,102,0.04) 0%, transparent 70%)" }}
+        />
+      </div>
 
       <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 text-center">
         <span
@@ -37,11 +40,11 @@ export default function FinalCTA() {
           حصريًا لا يتكرر.
         </p>
 
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
+        {/* WhatsApp CTA Button (large, prominent) */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
           <Button
             asChild
-            className="bg-[var(--color-whatsapp)] hover:bg-[#20BD5A] text-white rounded-lg gap-3 text-lg font-bold h-14 px-10 animate-wa-pulse"
+            className="bg-[var(--color-whatsapp)] hover:bg-[#20BD5A] text-white rounded-xl gap-3 text-lg font-bold h-15 px-12 shadow-lg transition-all duration-300 hover:scale-105 animate-wa-pulse"
           >
             <a
               href="https://wa.me/97471722484"
@@ -49,36 +52,44 @@ export default function FinalCTA() {
               rel="noopener noreferrer"
             >
               <MessageCircle className="w-6 h-6" />
-              تواصل عبر واتساب
+              تواصل عبر واتساب الآن
             </a>
           </Button>
         </div>
 
-        {/* Phone number */}
-        <div className="flex items-center justify-center gap-2 mb-8">
-          <Phone className="w-4 h-4" style={{ color: "var(--text-muted)" }} />
-          <span
-            className="text-lg font-medium tracking-wider"
-            style={{ color: "var(--text-primary)" }}
+        {/* Secondary links */}
+        <div className="flex items-center justify-center gap-6 flex-wrap">
+          <a
+            href="https://www.instagram.com/lumina.qa"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-medium transition-colors duration-200 hover:underline"
+            style={{ color: "var(--text-muted)" }}
           >
-            +974 7172 2484
-          </span>
+            <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.773 1.682 4.92 4.92.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.682 4.773-4.92 4.92-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.253-.149-4.773-1.682-4.92-4.92-.058-1.265-.07-1.645-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.668-4.772 4.92-4.92 1.265-.06 1.645-.07 4.85-.07zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+            @lumina.qa
+          </a>
+          <a
+            href="https://luminamajestic.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-medium transition-colors duration-200 hover:underline"
+            style={{ color: "var(--text-muted)" }}
+          >
+            <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+            luminamajestic.com
+          </a>
         </div>
 
         {/* Decorative separator */}
-        <div className="flex items-center justify-center gap-4">
-          <div
-            className="w-24 h-px"
-            style={{ background: "var(--border-default)" }}
-          />
-          <div
-            className="w-3 h-3 rounded-full"
-            style={{ background: "var(--accent-primary)" }}
-          />
-          <div
-            className="w-24 h-px"
-            style={{ background: "var(--border-default)" }}
-          />
+        <div className="flex items-center justify-center gap-4 mt-10">
+          <div className="w-24 h-px bg-gradient-to-l from-[var(--accent-primary)] to-transparent" />
+          <div className="w-3 h-3 rounded-full animate-glow-pulse" style={{ background: "var(--accent-primary)" }} />
+          <div className="w-24 h-px bg-gradient-to-r from-[var(--accent-primary)] to-transparent" />
         </div>
       </div>
     </section>

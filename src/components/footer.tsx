@@ -1,4 +1,5 @@
 import { MessageCircle, Instagram, Globe } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function Footer() {
   return (
@@ -60,17 +61,20 @@ export default function Footer() {
               تواصل معنا
             </h4>
             <div className="space-y-4">
-              {/* WhatsApp */}
-              <a
-                href="https://wa.me/97471722484"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 text-sm transition-colors duration-200 hover:text-[var(--color-whatsapp)]"
-                style={{ color: "var(--text-muted)" }}
+              {/* WhatsApp Button */}
+              <Button
+                asChild
+                className="bg-[var(--color-whatsapp)] hover:bg-[#20BD5A] text-white rounded-lg gap-2 text-sm font-medium h-10 px-4 w-full justify-start transition-all duration-200"
               >
-                <MessageCircle className="w-5 h-5" />
-                <span>واتساب: +974 7172 2484</span>
-              </a>
+                <a
+                  href="https://wa.me/97471722484"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  تواصل عبر واتساب
+                </a>
+              </Button>
 
               {/* Instagram */}
               <a

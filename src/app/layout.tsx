@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Tajawal, Inter, Playfair_Display } from "next/font/google";
+import { IBM_Plex_Sans_Arabic, Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 
-const tajawal = Tajawal({
-  variable: "--font-tajawal",
+const ibmPlexArabic = IBM_Plex_Sans_Arabic({
+  variable: "--font-ibm-arabic",
   subsets: ["arabic"],
-  weight: ["300", "400", "500", "700", "800", "900"],
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -67,7 +67,7 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl" suppressHydrationWarning>
       <body
-        className={`${tajawal.variable} ${inter.variable} ${playfair.variable} antialiased bg-background text-foreground`}
+        className={`${ibmPlexArabic.variable} ${inter.variable} ${playfair.variable} antialiased bg-background text-foreground`}
       >
         {children}
         <Toaster />

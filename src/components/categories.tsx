@@ -35,8 +35,13 @@ const categories: Category[] = [
 
 export default function Categories() {
   return (
-    <section className="py-16 md:py-24 bg-[var(--bg-surface)]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-16 md:py-24 bg-lumina-categories relative overflow-hidden">
+      <div
+        className="absolute top-[50%] left-[5%] w-[250px] h-[250px] rounded-full animate-orb-1 pointer-events-none"
+        style={{ background: "radial-gradient(circle, rgba(201,169,110,0.04) 0%, transparent 70%)" }}
+      />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-14">
           <span
@@ -60,18 +65,17 @@ export default function Categories() {
               key={i}
               className="group relative rounded-xl overflow-hidden aspect-[3/4] cursor-pointer"
             >
-              {/* Image */}
               <Image
                 src={cat.image}
                 alt={cat.nameAr}
                 fill
-                className="object-cover transition-transform duration-500 group-hover:scale-110"
+                className="object-cover transition-transform duration-700 group-hover:scale-110"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 unoptimized
               />
 
               {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#050505]/90 via-[#050505]/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#060608]/90 via-[#060608]/20 to-transparent" />
 
               {/* Text */}
               <div className="absolute bottom-0 right-0 left-0 p-5">
@@ -90,7 +94,7 @@ export default function Categories() {
               </div>
 
               {/* Hover border glow */}
-              <div className="absolute inset-0 rounded-xl border border-transparent group-hover:border-[var(--accent-primary)] transition-all duration-300" />
+              <div className="absolute inset-0 rounded-xl border border-transparent group-hover:border-[rgba(201,169,110,0.4)] group-hover:shadow-glow transition-all duration-500" />
             </div>
           ))}
         </div>

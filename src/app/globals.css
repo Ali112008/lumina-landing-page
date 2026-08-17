@@ -8,7 +8,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-tajawal);
+  --font-sans: var(--font-ibm-arabic);
   --font-heading: var(--font-playfair);
   --font-accent: var(--font-inter);
   --font-mono: var(--font-geist-mono);
@@ -54,49 +54,51 @@
   --radius: 0.625rem;
 
   /* === LUMINA BRAND COLORS === */
-  --bg-base: #050505;
-  --bg-surface: #0F0F0F;
-  --bg-surface-alt: #1A1A1A;
-  --text-primary: #FAFAFA;
-  --text-muted: #8A8A8A;
+  --bg-base: #060608;
+  --bg-surface: #0C0C10;
+  --bg-surface-alt: #141418;
+  --text-primary: #F5F5F7;
+  --text-muted: #9A9AA0;
   --accent-primary: #C9A96E;
-  --accent-hover: #D4B87A;
+  --accent-hover: #D9BC84;
   --accent-glow: rgba(201, 169, 110, 0.25);
-  --border-default: #1E1E1E;
+  --border-default: #1C1C22;
   --color-whatsapp: #25D366;
   --color-instagram: #E4405F;
+  --color-deep-blue: #0A1628;
+  --color-warm-brown: #1A0E05;
 
   /* === shadcn/ui mapping to dark luxury === */
-  --background: #050505;
-  --foreground: #FAFAFA;
-  --card: #0F0F0F;
-  --card-foreground: #FAFAFA;
-  --popover: #0F0F0F;
-  --popover-foreground: #FAFAFA;
+  --background: #060608;
+  --foreground: #F5F5F7;
+  --card: #0C0C10;
+  --card-foreground: #F5F5F7;
+  --popover: #0C0C10;
+  --popover-foreground: #F5F5F7;
   --primary: #C9A96E;
-  --primary-foreground: #050505;
-  --secondary: #1A1A1A;
-  --secondary-foreground: #FAFAFA;
-  --muted: #1A1A1A;
-  --muted-foreground: #8A8A8A;
+  --primary-foreground: #060608;
+  --secondary: #141418;
+  --secondary-foreground: #F5F5F7;
+  --muted: #141418;
+  --muted-foreground: #9A9AA0;
   --accent: #C9A96E;
-  --accent-foreground: #050505;
+  --accent-foreground: #060608;
   --destructive: #cf2e2e;
-  --border: #1E1E1E;
-  --input: #1E1E1E;
+  --border: #1C1C22;
+  --input: #1C1C22;
   --ring: #C9A96E;
   --chart-1: #C9A96E;
-  --chart-2: #D4B87A;
-  --chart-3: #8A8A8A;
+  --chart-2: #D9BC84;
+  --chart-3: #9A9AA0;
   --chart-4: #25D366;
   --chart-5: #E4405F;
-  --sidebar: #0F0F0F;
-  --sidebar-foreground: #FAFAFA;
+  --sidebar: #0C0C10;
+  --sidebar-foreground: #F5F5F7;
   --sidebar-primary: #C9A96E;
-  --sidebar-primary-foreground: #050505;
-  --sidebar-accent: #1A1A1A;
-  --sidebar-accent-foreground: #FAFAFA;
-  --sidebar-border: #1E1E1E;
+  --sidebar-primary-foreground: #060608;
+  --sidebar-accent: #141418;
+  --sidebar-accent-foreground: #F5F5F7;
+  --sidebar-border: #1C1C22;
   --sidebar-ring: #C9A96E;
 }
 
@@ -112,103 +114,140 @@
   }
 }
 
-/* ========== LUMINA CUSTOM UTILITIES ========== */
+/* ========== RICH BACKGROUND GRADIENTS ========== */
+
+.bg-lumina-hero {
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 40%, rgba(201,169,110,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 80% at 20% 80%, rgba(10,22,40,0.5) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 80% at 80% 20%, rgba(26,14,5,0.4) 0%, transparent 50%),
+    linear-gradient(180deg, #060608 0%, #0A0D14 30%, #0D0A0F 60%, #060608 100%);
+}
+
+.bg-lumina-about {
+  background:
+    radial-gradient(ellipse 60% 50% at 70% 50%, rgba(201,169,110,0.04) 0%, transparent 50%),
+    linear-gradient(180deg, #060608 0%, #080A12 50%, #060608 100%);
+}
+
+.bg-lumina-features {
+  background:
+    radial-gradient(ellipse 70% 60% at 30% 30%, rgba(201,169,110,0.05) 0%, transparent 50%),
+    linear-gradient(180deg, #0C0C10 0%, #0A0E18 50%, #0C0C10 100%);
+}
+
+.bg-lumina-products {
+  background:
+    radial-gradient(ellipse 60% 40% at 50% 20%, rgba(201,169,110,0.06) 0%, transparent 40%),
+    linear-gradient(180deg, #060608 0%, #0B0A0E 50%, #060608 100%);
+}
+
+.bg-lumina-categories {
+  background:
+    radial-gradient(ellipse 50% 50% at 60% 60%, rgba(201,169,110,0.04) 0%, transparent 50%),
+    linear-gradient(180deg, #0C0C10 0%, #0A0C16 50%, #0C0C10 100%);
+}
+
+.bg-lumina-cta {
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 50%, rgba(201,169,110,0.08) 0%, transparent 50%),
+    radial-gradient(ellipse 40% 60% at 80% 80%, rgba(37,211,102,0.04) 0%, transparent 40%),
+    linear-gradient(180deg, #060608 0%, #080D14 40%, #0A080C 70%, #060608 100%);
+}
+
+/* ========== ANIMATED PARTICLES / ORBS ========== */
+
+@keyframes orb-float-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.3; }
+  33% { transform: translate(30px, -40px) scale(1.1); opacity: 0.5; }
+  66% { transform: translate(-20px, 20px) scale(0.9); opacity: 0.2; }
+}
+
+@keyframes orb-float-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.2; }
+  33% { transform: translate(-40px, 30px) scale(1.05); opacity: 0.4; }
+  66% { transform: translate(25px, -15px) scale(0.95); opacity: 0.15; }
+}
+
+@keyframes orb-float-3 {
+  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.25; }
+  50% { transform: translate(15px, -30px) scale(1.08); opacity: 0.4; }
+}
+
+.animate-orb-1 { animation: orb-float-1 8s ease-in-out infinite; }
+.animate-orb-2 { animation: orb-float-2 10s ease-in-out infinite; }
+.animate-orb-3 { animation: orb-float-3 12s ease-in-out infinite; }
+
+/* ========== LUMINA CUSTOM ANIMATIONS ========== */
 
 @keyframes glow-pulse {
-  0%, 100% {
-    opacity: 0.4;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.7;
-    transform: scale(1.05);
-  }
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.05); }
 }
 
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 
 @keyframes fade-in-up {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes shimmer {
-  0% {
-    background-position: -200% 0;
-  }
-  100% {
-    background-position: 200% 0;
-  }
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
 }
 
-.animate-glow-pulse {
-  animation: glow-pulse 3s ease-in-out infinite;
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-.animate-float {
-  animation: float 6s ease-in-out infinite;
+@keyframes border-glow {
+  0%, 100% { border-color: rgba(201,169,110,0.15); }
+  50% { border-color: rgba(201,169,110,0.4); }
 }
 
-.animate-fade-in-up {
-  animation: fade-in-up 0.6s ease-out forwards;
-}
+.animate-glow-pulse { animation: glow-pulse 3s ease-in-out infinite; }
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-fade-in-up { animation: fade-in-up 0.6s ease-out forwards; }
+.animate-border-glow { animation: border-glow 3s ease-in-out infinite; }
 
 .animate-shimmer {
-  background: linear-gradient(90deg, transparent 0%, rgba(201, 169, 110, 0.1) 50%, transparent 100%);
+  background: linear-gradient(90deg, transparent 0%, rgba(201, 169, 110, 0.08) 50%, transparent 100%);
   background-size: 200% 100%;
-  animation: shimmer 3s infinite;
+  animation: shimmer 4s infinite;
+}
+
+.animate-gradient-shift {
+  background-size: 200% 200%;
+  animation: gradient-shift 6s ease infinite;
 }
 
 /* Gold glow shadow utility */
 .shadow-glow {
-  box-shadow: 0 0 20px rgba(201, 169, 110, 0.15), 0 0 60px rgba(201, 169, 110, 0.05);
+  box-shadow: 0 0 20px rgba(201, 169, 110, 0.12), 0 0 60px rgba(201, 169, 110, 0.04);
 }
 
 .shadow-glow-lg {
-  box-shadow: 0 0 30px rgba(201, 169, 110, 0.2), 0 0 80px rgba(201, 169, 110, 0.08);
+  box-shadow: 0 0 30px rgba(201, 169, 110, 0.18), 0 0 80px rgba(201, 169, 110, 0.06);
 }
 
 /* WhatsApp pulse */
 @keyframes wa-pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4);
-  }
-  70% {
-    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-  }
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
+  70% { box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
 }
 
-.animate-wa-pulse {
-  animation: wa-pulse 2s infinite;
-}
+.animate-wa-pulse { animation: wa-pulse 2s infinite; }
 
-/* Custom scrollbar for dark theme */
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  background: #0F0F0F;
-}
-::-webkit-scrollbar-thumb {
-  background: #1E1E1E;
-  border-radius: 3px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #C9A96E;
-}
+/* ========== CUSTOM SCROLLBAR ========== */
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #0C0C10; }
+::-webkit-scrollbar-thumb { background: #1C1C22; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #C9A96E; }

@@ -1,7 +1,13 @@
 export default function About() {
   return (
-    <section id="about" className="py-16 md:py-24 bg-[var(--bg-base)]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-16 md:py-24 bg-lumina-about relative overflow-hidden">
+      {/* Decorative orb */}
+      <div
+        className="absolute top-[30%] left-[10%] w-[200px] h-[200px] rounded-full animate-orb-2 pointer-events-none"
+        style={{ background: "radial-gradient(circle, rgba(201,169,110,0.05) 0%, transparent 70%)" }}
+      />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section label */}
         <div className="text-center mb-12">
           <span
@@ -15,7 +21,7 @@ export default function About() {
               في عالم تُعامل فيه اللوحات كعنصر ديكور عابر
             </span>
             <br />
-            <span style={{ color: "var(--accent-primary)" }}>
+            <span className="bg-gradient-to-l from-[#C9A96E] via-[#D9BC84] to-[#C9A96E] bg-clip-text text-transparent">
               وُلدت LUMINA لإعادة تعريف معنى اللوحة الفنية
             </span>
           </h2>
@@ -27,13 +33,12 @@ export default function About() {
             className="text-lg md:text-xl leading-relaxed"
             style={{ color: "var(--text-muted)" }}
           >
-            هي بيان ذوق، وانعكاس لشخصية المكان، وخيار لمن يبحث عن التميز دون
-            تنازل.
+            هي بيان ذوق، وانعكاس لشخصية المكان، وخيار لمن يبحث عن التميز دون تنازل.
           </p>
 
           <div
             className="w-20 h-px mx-auto"
-            style={{ background: "var(--accent-primary)" }}
+            style={{ background: "linear-gradient(90deg, transparent, var(--accent-primary), transparent)" }}
           />
 
           <p
@@ -55,7 +60,7 @@ export default function About() {
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mt-16 max-w-4xl mx-auto">
           {[
             { value: "١+", label: "سنة خبرة" },
             { value: "٥٠+", label: "تصميم فريد" },
@@ -64,10 +69,10 @@ export default function About() {
           ].map((stat, i) => (
             <div
               key={i}
-              className="text-center p-6 rounded-xl border border-[var(--border-default)] bg-[var(--bg-surface)]"
+              className="group text-center p-6 rounded-xl border border-[var(--border-default)] bg-[rgba(12,12,16,0.6)] backdrop-blur-sm hover:border-[rgba(201,169,110,0.3)] transition-all duration-300"
             >
               <div
-                className="text-3xl md:text-4xl font-bold mb-2"
+                className="text-3xl md:text-4xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300"
                 style={{ color: "var(--accent-primary)" }}
               >
                 {stat.value}
