@@ -11,14 +11,14 @@ interface Product {
 
 const products: Product[] = [
   {
-    name: "الصقرُ الثلجي",
+    name: "أجنحةٌ الفراشه الماسيّة",
     image:
       "https://luminamajestic.com/wp-content/uploads/2025/10/IMG_3899-600x800.png",
     price: "٦٤٩",
     originalPrice: "٨٤٩",
   },
   {
-    name: "أجنحةٌ الفراشه الماسيّة",
+    name: "الصقرُ الثلجي",
     image:
       "https://luminamajestic.com/wp-content/uploads/2026/01/IMG_3905-600x800.png",
     price: "٦٤٩",

@@ -8,26 +8,26 @@ interface Category {
 
 const categories: Category[] = [
   {
-    nameAr: "حيوانات",
-    nameEn: "ANIMALS",
-    image:
-      "https://luminamajestic.com/wp-content/uploads/2025/10/تصميم-بدون-عنوان-4.png",
-  },
-  {
-    nameAr: "مركبات فارهه",
+    nameAr: "مركبات فارهة",
     nameEn: "LUXURY VEHICLE",
     image:
-      "https://luminamajestic.com/wp-content/uploads/2025/10/تصميم-بدون-عنوان-2-1.png",
+      "https://luminamajestic.com/wp-content/uploads/2025/10/تصميم-بدون-عنوان-4.png",
   },
   {
     nameAr: "فن إسلامي",
     nameEn: "ISLAMIC ART",
     image:
+      "https://luminamajestic.com/wp-content/uploads/2025/10/تصميم-بدون-عنوان-2-1.png",
+  },
+  {
+    nameAr: "واجهة المدينة",
+    nameEn: "SKYLINE",
+    image:
       "https://luminamajestic.com/wp-content/uploads/2025/10/تصميم-بدون-عنوان-1-1.png",
   },
   {
-    nameAr: "واجهه المدينه",
-    nameEn: "SKYLINE",
+    nameAr: "حيوانات",
+    nameEn: "ANIMALS",
     image:
       "https://luminamajestic.com/wp-content/uploads/2025/10/تصميم-بدون-عنوان-3.png",
   },
