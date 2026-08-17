@@ -17,7 +17,7 @@ const products: Product[] = [
       "https://luminamajestic.com/wp-content/uploads/2025/10/IMG_3899-600x800.png",
     price: "649",
     originalPrice: "849",
-    storeUrl: "https://luminamajestic.com/product/هيبةُ-الخريف/",
+    storeUrl: "https://luminamajestic.com/product/b-vcx/",
   },
   {
     name: "الصقرُ الثلجي",
@@ -32,7 +32,7 @@ const products: Product[] = [
       "https://luminamajestic.com/wp-content/uploads/2025/10/IMG_3904-1-600x800.png",
     price: "649",
     originalPrice: "849",
-    storeUrl: "https://luminamajestic.com/product/صهيل-الأفق/",
+    storeUrl: "https://luminamajestic.com/product/iphone-dock-%d9%86%d8%b3%d8%ae%d8%a9/",
   },
   {
     name: "دلالُ الغزال",

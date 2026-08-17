@@ -30,8 +30,8 @@ const categories: Category[] = [
     storeUrl: "https://luminamajestic.com/product-category/واجهه-المدينه-skyline/",
   },
   {
-    nameAr: "طبيعة",
-    nameEn: "NATURE",
+    nameAr: "طبيعة فنية",
+    nameEn: "ARTISTIC NATURE",
     image:
       "https://luminamajestic.com/wp-content/uploads/2025/10/تصميم-بدون-عنوان-3.png",
     storeUrl: "https://luminamajestic.com/product-category/⁠الطبيعه-الفنيه-artistic-nature/",
