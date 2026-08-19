@@ -121,27 +121,27 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* QR Code — brand-colored landing page link */}
+          {/* QR Code — brand-colored WhatsApp link */}
           <div className="flex flex-col items-center md:items-start">
             <h4
               className="text-xs font-bold tracking-[0.25em] uppercase mb-6"
               style={{ color: "var(--accent-champagne)" }}
             >
-              امسح للزيارة
+              امسح للتواصل
             </h4>
             <a
-              href="https://lumina-landing-page-theta.vercel.app/"
+              href="https://wa.me/97471722484"
               target="_blank"
               rel="noopener noreferrer"
               className="group block transition-transform duration-300 hover:scale-[1.04]"
-              aria-label="امسح الباركود لزيارة صفحة LUMINA"
+              aria-label="امسح الباركود لفتح محادثة واتساب"
             >
               <div className="relative rounded-2xl p-1.5 border border-[rgba(212,175,55,0.25)] hover:border-[rgba(212,175,55,0.55)] shadow-gold-lg transition-all duration-300">
                 <Image
                   src="/lumina-qr.png"
-                  alt="باركود LUMINA — امسح للوصول للصفحة"
+                  alt="باركود LUMINA — امسح لفتح محادثة واتساب"
                   width={170}
-                  height={185}
+                  height={188}
                   className="rounded-xl w-[170px] h-auto block"
                   priority={false}
                 />
@@ -149,7 +149,7 @@ export default function Footer() {
             </a>
             <div className="mt-3 flex items-center gap-2 text-xs" style={{ color: "var(--text-muted)" }}>
               <ScanLine className="w-3.5 h-3.5" style={{ color: "var(--accent-primary)" }} />
-              <span>للوصول السريع عبر الموبايل</span>
+              <span>للدردشة السريعة على واتساب</span>
             </div>
           </div>
         </div>
